@@ -1,0 +1,1 @@
+export const ABOUT_ME = `Hello, I am Asish. I am a Frontend Developer currently working at Rizzle. I'm a React enthusiast, crafting cool stuff for the web. With React, I build sleek and snazzy interfaces that grab attention. Let's team up and create awesome things together!`;
