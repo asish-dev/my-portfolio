@@ -27,19 +27,21 @@ export default function Code() {
         <div className="flex flex-col gap-2 items-start">
           {data.map(({ name, description, deployLink, githubLink }) => {
             return (
-              <div key={name}>
+              <div key={name} className="flex flex-col gap-1">
                 <h1 className="underline text-md text-primary ">{name}</h1>
                 <p className="text-sm">{description}</p>
-                {!!deployLink && (
-                  <ExternalLink label="Live Demo" link={deployLink} />
-                )}
-                {!!githubLink && (
-                  <ExternalLink
-                    label="GitHub"
-                    link={githubLink}
-                    renderIcon={<GitHubLogoIcon />}
-                  />
-                )}
+                <div className="flex gap-3 ">
+                  {!!deployLink && (
+                    <ExternalLink label="Live Demo" link={deployLink} />
+                  )}
+                  {!!githubLink && (
+                    <ExternalLink
+                      label="GitHub"
+                      link={githubLink}
+                      renderIcon={<GitHubLogoIcon />}
+                    />
+                  )}
+                </div>
               </div>
             );
           })}
