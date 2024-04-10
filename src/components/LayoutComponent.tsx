@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import Header from './Header';
-import About from './About';
+import { FC } from "react";
+import Header from "./Header";
+import About from "./About";
 
 interface LayoutComponentProps {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface LayoutComponentProps {
 
 const LayoutComponent: FC<LayoutComponentProps> = ({ children }) => {
   return (
-    <main className="flex flex-col items-center py-8 w-96">
+    <main className="flex flex-col items-center py-8 w-[620px]">
       <Header />
       {children}
     </main>

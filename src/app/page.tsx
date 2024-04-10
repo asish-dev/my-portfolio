@@ -1,12 +1,14 @@
-import About from '@/components/About';
-import Header from '@/components/Header';
-import LayoutComponent from '@/components/LayoutComponent';
-import Image from 'next/image';
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import LayoutComponent from "@/components/LayoutComponent";
 
 export default function Home() {
   return (
     <LayoutComponent>
-      <About />
+      <div className="flex flex-col gap-8">
+        <About />
+        <Experience />
+      </div>
     </LayoutComponent>
   );
 }
