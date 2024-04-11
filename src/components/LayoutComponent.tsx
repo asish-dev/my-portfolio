@@ -8,7 +8,7 @@ interface LayoutComponentProps {
 
 const LayoutComponent: FC<LayoutComponentProps> = ({ children }) => {
   return (
-    <main className="flex flex-col items-center py-8 w-[620px]">
+    <main className="flex flex-col items-center py-8 px-2 w-full max-w-[620px]">
       <Header />
       {children}
     </main>

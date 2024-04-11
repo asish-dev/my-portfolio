@@ -35,7 +35,10 @@ const Experience: FC = () => {
       <div className="flex flex-col gap-8">
         {data.map(({ company, role, logo, time, description }) => {
           return (
-            <div key={company} className="flex text-xs gap-4 ">
+            <div
+              key={company}
+              className="flex flex-col md:flex-row text-xs gap-4 "
+            >
               <div className="w-32 grow-0 shrink-0">
                 <p>{time}</p>
               </div>
