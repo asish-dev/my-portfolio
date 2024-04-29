@@ -107,7 +107,7 @@ export default function TicTacToe() {
 
   return (
     <div className="grid grid-cols-3 mt-8">
-      {grid.map((row, rowIdx) => {
+      {grid.map((row: Array<string | null>, rowIdx: number) => {
         return row.map((col, colIdx) => {
           return (
             <div
