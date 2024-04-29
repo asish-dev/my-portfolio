@@ -17,6 +17,11 @@ const data = [
     description: `Collection of custom hooks built from scratch in React`,
     githubLink: 'https://github.com/asish-dev/react-custom-hooks',
   },
+  {
+    name: 'tic-tac-toe',
+    description: 'An implementation of the classic game of tic-tac-toe',
+    pageLink: '/tic-tac-toe',
+  },
 ];
 
 export default function Code() {
@@ -25,26 +30,31 @@ export default function Code() {
       <div className="flex flex-col items-center gap-1">
         <h1 className="text-lg">Projects</h1>
         <div className="flex flex-col gap-2 items-start">
-          {data.map(({ name, description, deployLink, githubLink }) => {
-            return (
-              <div key={name} className="flex flex-col gap-1">
-                <h1 className="underline text-md text-primary ">{name}</h1>
-                <p className="text-sm">{description}</p>
-                <div className="flex gap-3 ">
-                  {!!deployLink && (
-                    <ExternalLink label="Live Demo" link={deployLink} />
-                  )}
-                  {!!githubLink && (
-                    <ExternalLink
-                      label="GitHub"
-                      link={githubLink}
-                      renderIcon={<GitHubLogoIcon />}
-                    />
-                  )}
+          {data.map(
+            ({ name, description, deployLink, githubLink, pageLink }) => {
+              return (
+                <div key={name} className="flex flex-col gap-1">
+                  <h1 className="underline text-md text-primary ">{name}</h1>
+                  <p className="text-sm">{description}</p>
+                  <div className="flex gap-3 ">
+                    {!!pageLink && (
+                      <ExternalLink label="Live Demo" link={pageLink} />
+                    )}
+                    {!!deployLink && (
+                      <ExternalLink label="Live Demo" link={deployLink} />
+                    )}
+                    {!!githubLink && (
+                      <ExternalLink
+                        label="GitHub"
+                        link={githubLink}
+                        renderIcon={<GitHubLogoIcon />}
+                      />
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            }
+          )}
         </div>
       </div>
     </LayoutComponent>
